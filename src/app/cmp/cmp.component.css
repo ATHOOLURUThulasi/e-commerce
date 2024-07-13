@@ -1,0 +1,14 @@
+div{
+    display:flex;
+    width:850px;
+    flex-direction:row;
+    justify-content: space-between;
+    margin-bottom:10px;
+    margin-left:200px;
+
+}
+
+img{
+    height:200px;
+    width:200px;
+}

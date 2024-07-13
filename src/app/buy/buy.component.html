@@ -1,0 +1,87 @@
+<!-- Mat Vertical Stepper with Payment Mode Options -->
+<mat-vertical-stepper [linear]="false" #stepper>
+    <!-- Step 1: Buyer Information -->
+    <mat-step [stepControl]="buyerInfoForm">
+      <ng-template matStepLabel>Buyer Information</ng-template>
+      <form [formGroup]="buyerInfoForm">
+        <div>
+          <mat-form-field>
+            <input matInput placeholder="Name" formControlName="name" required>
+          </mat-form-field>
+        </div>
+        <div>
+
+          <mat-form-field>
+            <input matInput placeholder="Email" formControlName="email" required>
+          
+          </mat-form-field>
+        </div>
+          <div>
+          <mat-form-field>
+            <input matInput placeholder="phonenumber" formControlName="phone" required>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <textarea matInput placeholder="Address" formControlName="address" rows="4" required></textarea>
+          </mat-form-field>
+        </div>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+  
+    <!-- Step 2: Payment Mode Selection -->
+    <mat-step>
+      <ng-template matStepLabel>Select Payment Mode</ng-template>
+      <div>
+        <form [formGroup]="paymentModeForm">
+          <mat-radio-group formControlName="payment">
+            <mat-radio-button value="credit">Credit Card</mat-radio-button>
+            <mat-radio-button value="debit">Debit Card</mat-radio-button>
+            <mat-radio-button value="paypal">PayPal</mat-radio-button>
+          </mat-radio-group>
+        </form>
+      </div>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </mat-step>
+  
+    <!-- Step 3: Confirmation -->
+    <mat-step>
+      <ng-template matStepLabel>Confirmation</ng-template>
+      <div>
+        <p>Buyer Name: {{ buyerInfoForm.value.name }}</p>
+        <p>Email: {{ buyerInfoForm.value.email }}</p>
+        <p>phone:{{buyerInfoForm.value.phone}}</p>
+        <p>Address: {{ buyerInfoForm.value.address }}</p>
+        <p>Payment Mode: {{ paymentModeForm.value.payment }}</p>
+        <mat-card-actions>
+          <button mat-icon-button (click)="remove()"><mat-icon>remove</mat-icon></button>
+             quantity:{{quantity}}
+          <button mat-icon-button (click)="add()"><mat-icon>add</mat-icon></button>
+        </mat-card-actions>
+        <p>Total Amount: {{vars}}</p>
+        
+        <!-- Conditional button based on form validity -->
+        <div *ngIf="buyerInfoForm.status == 'INVALID' || paymentModeForm.status == 'INVALID'">
+          <button mat-button (click)="placeOrder()" disabled>Place Order</button>
+        </div>
+        <div *ngIf="buyerInfoForm.status == 'VALID' && paymentModeForm.status == 'VALID'">
+          <button mat-button (click)="placeOrder()" enabled>Place Order</button>
+        </div>
+        
+        <button mat-button matStepperPrevious style="margin-top: 10px;">Back</button>
+      </div>
+    </mat-step>
+  </mat-vertical-stepper>
+  <div>
+    <button mat-button (click)="goToHomePage()" style="margin-top: 10px;">Back to Home</button>
+  </div>
+  
+
+
+  

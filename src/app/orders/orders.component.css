@@ -1,0 +1,11 @@
+.card-with-shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 255, 0.7); /* Adjust shadow properties as needed */
+    margin-bottom: 20px; /* Optional: Add margin-bottom to separate cards */
+  }
+  
+p{
+    margin-left:20px;
+}
+button{
+    margin-left:20px;
+}

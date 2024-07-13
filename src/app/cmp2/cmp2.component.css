@@ -1,0 +1,11 @@
+div{
+    display:flex;
+    width:850px;
+    justify-content: space-between;
+    margin-left:200px;
+}
+
+img{
+    height:200px;
+    width:200px;
+}

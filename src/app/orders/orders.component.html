@@ -1,0 +1,21 @@
+<img src="https://png.pngtree.com/png-vector/20230124/ourmid/pngtree-order-now-banner-for-promotion-of-your-business-png-image_6565761.png"
+     *ngIf="b" style="position: absolute; height: 450px; width: 700px; left: 250px; position: fixed;">
+
+<div style="display: flex; flex-direction: row; flex-wrap: wrap;">
+  <div class="card-with-shadow" style="width: 300px; height: 480px; margin-left: 30px; margin-top: 10px;"
+       *ngFor="let i of products">
+    <div class="card" style="width: 100%; height: 100%;">
+      <img class="card-img-top" [src]="i.image" alt="Product Image"
+           style="width: 250px; height: 200px; object-fit: cover; margin-left: 20px; margin-top: 20px;">
+      <div class="card-body">
+        <p class="card-title">Ordered Date: {{ i.orderDate | date:'dd/MM/yy' }}</p>
+        <p class="card-text">Customer Name: {{ i.customerName }}</p>
+        <p class="card-text">Quantity: {{ i.quantity }}</p>
+        <p class="card-text">Price: {{ i.price }}</p>
+        <p class="card-text">Total: {{ i.total }}</p>
+        <p class="card-text">Delivery Date: {{ i.deliveredDate | date:'dd/MM/yy' }}</p>
+        <button class="btn btn-primary" (click)="cancel(i.base)">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

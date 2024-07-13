@@ -1,0 +1,13 @@
+div{
+    background-image: url('https://freefrontend.com/assets/img/html-funny-404-pages/HTML-404-Error-Page.gif');
+    background-size: cover;
+    width:1250px;
+    height:600px;
+}
+.button{
+    background-color: brown;
+    position: absolute;
+    top:500px;
+    left:600px;
+    padding:15px;
+}

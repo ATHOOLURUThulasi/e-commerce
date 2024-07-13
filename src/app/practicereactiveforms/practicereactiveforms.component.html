@@ -1,0 +1,31 @@
+<!-- <form >
+    <div [formGroup]="l">
+        <div formArrayName="g">
+            <ng-container *ngFor="let control of g.controls; let i = index">
+            mobilenumber {{i+1}} :<input type="text" [formControl]="control">
+                <button (click)="del(control)">delete</button><br>
+            </ng-container>
+        </div>
+    </div>
+    <button (click)="add()">click</button>
+</form> -->.
+<!-- <form [formGroup]="v">
+    <input  type="password" formControlName="password">
+    <div *ngIf="passwor?.touched || passwor?.dirty">
+    <div *ngIf="passwor?.errors?.['required']">
+       must be requried
+       </div>
+    <div *ngIf="passwor.errors?.['patern'] && passwor?.dirty">
+        must be atleast one upper,lower,digit,specialcase
+    </div>
+    </div>
+    <input type="number" formControlName="new">
+    <div *ngIf="new?.errors?.['pattern']">
+       this id product alerady exists
+    </div>
+
+
+  
+</form>
+
+ -->

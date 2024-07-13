@@ -1,0 +1,30 @@
+<div *ngIf="b">
+  <nav>
+    <p style="color: white; position: absolute; top: 15px; left: 40px; font-size: 30px;">𝔼𝕡𝕚𝕔𝔹𝕦𝕪</p>
+    <div style="margin-left: 700px; margin-top: 10px;">
+      <a routerLink="/home"><button class="dropbtn">Home</button></a>
+      <div class="dropdown">
+        <button class="dropbtn">Categories</button>
+        <div class="dropdown-content">
+          <a routerLink="electronics">Electronics</a>
+          <a routerLink="womensclothing">Women's Clothing</a>
+          <a routerLink="mensclothing">Men's Clothing</a>
+          <a routerLink="Jewellery">Jewellery</a>
+        </div>
+      </div>&nbsp;
+      <a routerLink="orders">
+        <button matBadge={{ordercount}} matBadgePosition="after" matBadgeColor="accent" class="dropbtn">
+          My Orders
+        </button>
+      </a>
+      <a routerLink="cart">
+        <button matBadge={{count}} matBadgePosition="after" matBadgeColor="accent" class="dropbtn">
+          <mat-icon>shopping_cart</mat-icon>
+        </button>
+      </a>
+      <a routerLink="logout" class="dropbtn" (click)="sub()">Logout</a>
+    </div>
+  </nav>
+</div>
+
+<router-outlet></router-outlet>

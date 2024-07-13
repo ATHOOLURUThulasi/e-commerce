@@ -1,0 +1,52 @@
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1300px; /* Adjust width to cover entire viewport */
+  height: 100vh; /* Adjust height to cover entire viewport */
+  position: fixed; /* Fixed position to cover entire page */
+  top: 0;
+  left: 0;
+  background-image: url('https://e1.pxfuel.com/desktop-wallpaper/975/55/desktop-wallpaper-login-page-login.jpg');
+  background-size: cover;
+   /* Cover entire container *
+  box-shadow: 0 4px 8px rgba(7, 40, 172, 0.9); /* Box shadow */
+  overflow: hidden; /* Ensure gradient overlay doesn't overflow */
+  color: white; /* Text color */
+}
+
+
+/* Optional: Add additional styles for text or other elements inside .centered-container */
+.centered-container h1 {
+  font-size: 3em;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+  
+  .example-form {
+    width: 300px; /* Adjust width of the form */
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-bottom: 20px; 
+    height:250px;
+    box-shadow: 0px 0px 10px rgba(33, 0, 21, 0.9)
+    /* mix-blend-mode: multiply; */
+  }
+  
+  .example-full-width {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .login-button {
+    position: absolute;
+    bottom: 20px;
+    top:380px; /* Adjust distance from bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    text-align: center;
+  }
+  
