@@ -3,12 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Cmp1Component } from './cmp1/cmp1.component';
-import { CmpComponent } from './cmp/cmp.component';
-import { Cmp2Component } from './cmp2/cmp2.component';
-import { PropertybindingNgclassstyleComponent } from './propertybinding-ngclassstyle/propertybinding-ngclassstyle.component';
-import { CommunicationComponent } from './communication/communication.component';
-import { PracticereactiveformsComponent } from './practicereactiveforms/practicereactiveforms.component'
 import {RouterModule, Routes} from '@angular/router';
 
 import { ProjectComponent } from './project/project.component';
@@ -19,7 +13,6 @@ import { Product3Component } from './product3/product3.component';
 import { Product4Component } from './product4/product4.component';
 import { CartitemsComponent } from './cartitems/cartitems.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { Practice1Component } from './practice1/practice1.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { BuyComponent } from './buy/buy.component';
@@ -73,12 +66,6 @@ let a:Routes=[{
 @NgModule({
   declarations: [
     AppComponent,
-    Cmp1Component,
-    CmpComponent,
-    Cmp2Component,
-    PropertybindingNgclassstyleComponent,
-    CommunicationComponent,
-    PracticereactiveformsComponent,
       ProjectComponent,
     HomeComponent,
     Product1Component,
@@ -86,7 +73,6 @@ let a:Routes=[{
     Product3Component,
     Product4Component,
     CartitemsComponent,
-    Practice1Component,
     BuyComponent,
     TotalcartComponent,
     OrdersComponent,
